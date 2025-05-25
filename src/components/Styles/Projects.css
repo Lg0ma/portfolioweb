@@ -2,7 +2,7 @@
 .projectsSection {
   width: 100vw;
   min-height: 100vh;
-  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 50%, #1a1a1a 100%);
+  background: transparent; /* Let global gradient show through */
   padding: 6rem 2rem;
   position: relative;
   overflow: hidden;

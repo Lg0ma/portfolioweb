@@ -2,7 +2,6 @@ import "./Styles/navbar.css"
 
 export function Navbar() {
   const navItems = [
-    { href: "#hero", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },

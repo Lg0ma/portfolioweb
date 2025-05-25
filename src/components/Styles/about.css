@@ -1,0 +1,81 @@
+/* About Section Styles */
+.aboutSection {
+  width: 100vw;
+  min-height: 100vh;
+  background: transparent; /* Let global gradient show through */
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.backgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 60% 60%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.aboutContent {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.aboutContent h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.025em;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.aboutContent p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.aboutContent p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 4rem 1rem;
+  }
+  
+  .aboutContent h1 {
+    font-size: 2.5rem;
+  }
+  
+  .aboutContent p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 3rem 1rem;
+  }
+  
+  .aboutContent h1 {
+    font-size: 2rem;
+  }
+}

@@ -68,11 +68,6 @@
   width: 100%;
 }
 
-/* Add some body padding to account for fixed navbar */
-body {
-  padding-top: 80px;
-}
-
 /* Scrollbar styling for better aesthetics */
 ::-webkit-scrollbar {
   width: 8px;
@@ -89,4 +84,33 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #be185d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-nav {
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 0.5rem;
+  }
+  
+  .navbar-brand h1 {
+    font-size: 1.3rem;
+  }
+  
+  .navbar-nav {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.85rem;
+  }
 }

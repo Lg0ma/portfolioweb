@@ -3,4 +3,11 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background: transparent; /* Let global gradient show through */
+  min-height: 100vh;
+}
+
+/* Remove body padding since sections handle their own spacing */
+body {
+  padding-top: 0 !important;
 }

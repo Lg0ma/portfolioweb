@@ -1,7 +1,10 @@
 import "./Styles/about.css"
+
 export function About() {
     return (
         <section id="about" className="aboutSection">
+            <div className="backgroundOverlay"></div>
+            
             <div className="aboutContent">
                 <h1>About Me</h1>
                 <p>
@@ -15,6 +18,6 @@ export function About() {
             </div>
         </section>
     )
-
 }
+
 export default About
