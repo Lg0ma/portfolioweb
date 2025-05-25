@@ -1,29 +1,33 @@
 import "./Styles/Contact.css"
-import { useRef, useState } from 'react'
+import { useRef, useState, FormEvent } from 'react'
 import emailjs from 'emailjs-com'
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 
 export function Contact() {
-    const form = useRef()
+    const form = useRef<HTMLFormElement>(null)
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitStatus, setSubmitStatus] = useState('')
 
-    const sendEmail = (e) => {
+    const sendEmail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setIsSubmitting(true)
         setSubmitStatus('')
 
-        emailjs.sendForm('service_8peruyi', 'template_o71465q', form.current, '7uqEu84nLKKRlrmaX')
-          .then((result) => {
-              console.log(result.text)
-              setSubmitStatus('success')
-              form.current.reset()
-              setIsSubmitting(false)
-          }, (error) => {
-              console.log(error.text)
-              setSubmitStatus('error')
-              setIsSubmitting(false)
-          })
+        if (form.current) {
+            emailjs.sendForm('service_8peruyi', 'template_o71465q', form.current, '7uqEu84nLKKRlrmaX')
+              .then((result) => {
+                  console.log(result.text)
+                  setSubmitStatus('success')
+                  if (form.current) {
+                      form.current.reset()
+                  }
+                  setIsSubmitting(false)
+              }, (error) => {
+                  console.log(error.text)
+                  setSubmitStatus('error')
+                  setIsSubmitting(false)
+              })
+        }
     }
 
     const contactInfo = [
@@ -89,7 +93,7 @@ export function Contact() {
                                 <textarea 
                                     name="message" 
                                     className="textarea"
-                                    rows="5"
+                                    rows={5}
                                     required
                                 ></textarea>
                             </div>

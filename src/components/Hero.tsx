@@ -1,5 +1,5 @@
 import "./Styles/Hero.css";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 export function Hero() {
     return (
