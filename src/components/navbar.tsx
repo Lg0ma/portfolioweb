@@ -1,4 +1,4 @@
-import "./styles/navbar.css"
+import "./Styles/navbar.css"
 
 export function Navbar() {
   const navItems = [
