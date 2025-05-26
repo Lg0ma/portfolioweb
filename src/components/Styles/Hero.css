@@ -99,44 +99,36 @@ section::after {
 
 .buttonContainer {
   display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* Centers the single button */
+  width: 100%;
 }
 
-.buttonContainer button {
+/* Download Button Styles */
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+  color: white;
+  text-decoration: none;
   border-radius: 12px;
-  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.buttonContainer button:first-child {
-  background: linear-gradient(90deg, #ec4899, #8b5cf6);
-  color: #fff;
-}
-
-.buttonContainer button:first-child:hover {
+.downloadButton:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(236, 72, 153, 0.4);
 }
 
-.buttonContainer button:last-child {
-  background: transparent;
-  border: 2px solid #ec4899;
-  color: #ec4899;
-}
-
-.buttonContainer button:last-child:hover {
-  background: #ec4899;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+.downloadIcon {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .Socials {
@@ -187,13 +179,14 @@ section::after {
   }
   
   .buttonContainer {
-    flex-direction: column;
     width: 100%;
     max-width: 300px;
+    justify-content: center;
   }
   
-  .buttonContainer button {
+  .downloadButton {
     width: 100%;
+    justify-content: center;
   }
   
   .Socials {
@@ -217,5 +210,10 @@ section::after {
   
   .heroMain h2 {
     font-size: 1.2rem;
+  }
+  
+  .downloadButton {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
   }
 }

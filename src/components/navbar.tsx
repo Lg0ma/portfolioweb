@@ -1,6 +1,9 @@
 import "./Styles/navbar.css"
+import { useEffect, useState } from "react"
 
 export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
   const navItems = [
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
@@ -8,8 +11,18 @@ export function Navbar() {
     { href: "#contact", label: "Contact" },
   ]
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      setIsScrolled(scrollTop > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-content">
           <div className="navbar-brand">

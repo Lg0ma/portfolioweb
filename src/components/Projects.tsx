@@ -1,31 +1,45 @@
 import "./Styles/Projects.css"
-import { Github } from "lucide-react"
+import { Github, Star } from "lucide-react"
+
+// Import your images from the assets folder
+import traceImage from "../assets/TRACE.png"
+import credStalkerImage from "../assets/credstalker.png"
+import healthRoutesImage from "../assets/HealthRoutes.png"
 
 export function Projects() {
     const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "TRACE Security Platform",
       description:
-        "A full-stack e-commerce solution built with Next.js, featuring user authentication, payment processing, and admin dashboard.",
-      image: "/placeholder.svg?height=200&width=400",
-      tech: ["Next.js", "TypeScript", "Stripe", "Prisma"],
+        "A comprehensive security testing platform integrating various penetration testing tools for network vulnerability assessment. Features AI-powered password generation, web crawling, and directory fuzzing capabilities.",
+      image: traceImage,
+      tech: ["Kali Linux", "Python", "SvelteKit", "FastAPI", "Docker", "VMWare"],
       imageClass: "pink",
+      github: "https://github.com/TadeoDelaRocha/CS4311TRACEDeltaSpring2025.git",
+      timeline: "August 2024 - May 2025",
+      highlight: "Full-Stack Security Architecture"
     },
     {
-      title: "Task Management App",
+      title: "CredStalker",
       description:
-        "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "/placeholder.svg?height=200&width=400",
-      tech: ["React", "Node.js", "Socket.io", "MongoDB"],
+        "A web-based credential security assessment tool that checks passwords and emails against known data breaches. Implements k-anonymity model for secure verification and provides vulnerability analysis with actionable security recommendations.",
+      image: credStalkerImage,
+      tech: ["React", "Python", "FastAPI", "HIBP API", "JavaScript"],
       imageClass: "blue",
+      github: "https://github.com/armenta-i/cred-stalker.git",
+      timeline: "January 2023 - May 2023",
+      highlight: "Frontend Development & API Integration"
     },
     {
-      title: "Weather Dashboard",
+      title: "Health Routes",
       description:
-        "A beautiful weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.",
-      image: "/placeholder.svg?height=200&width=400",
-      tech: ["Vue.js", "Express", "OpenWeather API", "Chart.js"],
+        "A cross-platform mobile application helping users locate nearby hospitals and healthcare centers. Features real-time GPS tracking, live route updates, and comprehensive facility details through web scraping and API integration.",
+      image: healthRoutesImage,
+      tech: ["React Native", "FastAPI", "Google Maps API", "ExpoGo", "Docker"],
       imageClass: "orange",
+      github: "https://github.com/Josix7/AI-HACK.git",
+      timeline: "April 2025 - May 2025",
+      highlight: "Mobile Development & Real-time Features"
     },
   ]
     return (
@@ -44,12 +58,19 @@ export function Projects() {
                 {projects.map((project, index) => (
                 <div key={index} className="projectCard">
                     <div className={`projectImage ${project.imageClass}`}>
-                    <img src={project.image || "/placeholder.svg"} alt={project.title} />
+                    <img src={project.image} alt={project.title} />
                     <div className="imageOverlay"></div>
                     </div>
 
                     <div className="projectHeader">
-                    <h3 className="projectTitle">{project.title}</h3>
+                    <div className="projectTitleRow">
+                        <h3 className="projectTitle">{project.title}</h3>
+                    </div>
+                        <div className="projectHighlight">
+                        <Star className="highlightIcon" />
+                        <span className="highlightText">{project.highlight}</span>
+                        </div><br/>
+                    <p className="projectTimeline">{project.timeline}</p>
                     </div>
 
                     <div className="projectContent">
@@ -64,9 +85,15 @@ export function Projects() {
                     </div>
 
                     <div className="projectActions">
-                        <button className="primaryAction">
-                        <Github className="h-8 w-8" />
-                        </button>
+                        <a 
+                          href={project.github} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="primaryAction"
+                        >
+                          View on GitHub
+                          <Github className="h-8 w-8" />
+                        </a>
                     </div>
                     </div>
                 </div>
