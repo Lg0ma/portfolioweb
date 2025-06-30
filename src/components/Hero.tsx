@@ -17,7 +17,7 @@ export function Hero() {
             <div className="Content">
                 <div className="buttonContainer">
                     <a 
-                        href="/resume.pdf" 
+                        href="/Resume.pdf" 
                         download="Luis_Gomez_Resume.pdf"
                         className="downloadButton"
                         onClick={handleDownload}
