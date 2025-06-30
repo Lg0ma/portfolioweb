@@ -38,7 +38,7 @@ export function Projects() {
       tech: ["React Native", "FastAPI", "Google Maps API", "ExpoGo", "Docker"],
       imageClass: "orange",
       github: "https://github.com/Josix7/AI-HACK.git",
-      timeline: "April 2025 - May 2025",
+      timeline: "April 2025 - Ongoing",
       highlight: "Mobile Development & Real-time Features"
     },
   ]
