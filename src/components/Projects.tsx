@@ -15,7 +15,7 @@ export function Projects() {
       image: traceImage,
       tech: ["Kali Linux", "Python", "SvelteKit", "FastAPI", "Docker", "VMWare"],
       imageClass: "pink",
-      github: "https://github.com/TadeoDelaRocha/CS4311TRACEDeltaSpring2025.git",
+      github: "https://github.com/TadeoDelaRocha/CS4311_TRACE_Delta_Spring2025.git",
       timeline: "August 2024 - May 2025",
       highlight: "Full-Stack Security Architecture"
     },
