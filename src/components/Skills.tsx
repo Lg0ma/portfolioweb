@@ -34,6 +34,7 @@ export function Skills() {
             title: "Backend Development",
             icon: <Server className="categoryIconSvg" />,
             skills: [
+                { name: "Spring Boot", level: "expert" },
                 { name: "Node.js", level: "expert" },
                 { name: "FastAPI", level: "expert" },
                 { name: "Flask", level: "advanced" },
@@ -72,9 +73,11 @@ export function Skills() {
             icon: <Database className="categoryIconSvg" />,
             skills: [
                 { name: "MySQL", level: "expert" },
+                { name: "Supabase", level: "expert" },
                 { name: "PostgreSQL", level: "advanced" },
                 { name: "MongoDB", level: "intermediate" },
-                { name: "SQLite", level: "intermediate" }
+                { name: "SQLite", level: "intermediate" },
+                { name: "Firebase", level: "intermediate" }
             ]
         }
     ]

@@ -15,7 +15,7 @@ export function Projects() {
         "A HIPAA-compliant medical imaging platform for processing X-ray images for healthcare clinics. Features real-time DICOM protocol integration via TCP/IP for rapid diagnostics, secure Supabase database linking medical images with patient records, and automated QA workflow to reduce report review time while maintaining regulatory compliance.",
       image: ezradImage,
       tech: ["React", "FastAPI", "Supabase", "Tailwind CSS", "DICOM", "TCP/IP"],
-      imageClass: "green",
+      imageClass: "blue",
       github: "https://github.com/Lg0ma/EZRAD.git",
       timeline: "September 2024 - Present",
       highlight: "HIPAA-Compliant Healthcare Solution"
@@ -48,7 +48,7 @@ export function Projects() {
         "A cross-platform mobile app for locating healthcare facilities using Google Maps Places API. Features real-time GPS tracking with low latency for live navigation updates, scraped and cached facility data to reduce API calls while maintaining freshness, and optimized React Native performance for smooth scrolling across iOS and Android.",
       image: healthRoutesImage,
       tech: ["React Native", "FastAPI", "Google Gen-AI","Google Maps API", "GPS", "ExpoGo"],
-      imageClass: "orange",
+      imageClass: "pink",
       github: "https://github.com/armenta-i/health-routes.git",
       timeline: "April 2025 - May 2025",
       highlight: "Cross-Platform Healthcare Navigation"

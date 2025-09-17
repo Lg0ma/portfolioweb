@@ -139,7 +139,7 @@
 }
 
 .projectImageWrapper.orange {
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.3), rgba(234, 88, 12, 0.3));
+  background: linear-gradient(135deg, rgba(156, 163, 175, 0.3), rgba(107, 114, 128, 0.3));
 }
 
 /* Project Details Section */
@@ -258,9 +258,9 @@
 }
 
 .techTag.orange {
-  background: rgba(249, 115, 22, 0.2);
-  border-color: rgba(249, 115, 22, 0.3);
-  color: #fed7aa;
+  background: rgba(107, 114, 128, 0.2);
+  border-color: rgba(107, 114, 128, 0.3);
+  color: #f9fafb;
 }
 
 .techTag.green:hover {
@@ -279,8 +279,8 @@
 }
 
 .techTag.orange:hover {
-  background: rgba(249, 115, 22, 0.3);
-  border-color: rgba(249, 115, 22, 0.5);
+  background: rgba(107, 114, 128, 0.3);
+  border-color: rgba(107, 114, 128, 0.5);
 }
 
 /* Project Actions */
