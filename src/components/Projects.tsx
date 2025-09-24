@@ -2,7 +2,7 @@ import "./Styles/Projects.css"
 import { Github, Star } from "lucide-react"
 
 // Import your images from the assets folder
-import ezradImage from "../assets/EZrad.png"
+import ezradImage from "../assets/EZRAD.png"
 import traceImage from "../assets/TRACE.png"
 import credStalkerImage from "../assets/credstalker.png"
 import healthRoutesImage from "../assets/HealthRoutes.png"
